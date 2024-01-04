@@ -1,0 +1,22 @@
+{
+    "create_quotation": {
+        "method": "post",
+        "access_type": "private",
+        "display_name": "Create Quote"
+    },
+    "update_quotation": {
+        "method": "put",
+        "access_type": "private",
+        "display_name": "Update Quote"
+    },
+    "list_quotations": {
+        "method": "get",
+        "access_type": "private",
+        "display_name": "Get Quotes"
+    },
+    "upload_file": {
+        "method": "post",
+        "access_type": "private",
+        "display_name": "Upload File"
+    }
+}

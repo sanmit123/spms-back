@@ -1,0 +1,2 @@
+class QuotationAudit < ApplicationRecord
+end

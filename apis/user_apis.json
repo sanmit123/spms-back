@@ -1,0 +1,22 @@
+{
+    "create_user": {
+        "method": "post",
+        "access_type": "public",
+        "display_name": "Create User"
+    },
+    "login_user": {
+        "method": "post",
+        "access_type": "public",
+        "display_name": "Login User"
+    },
+    "get_session": {
+        "method": "get",
+        "access_type": "public",
+        "display_name": "Get User Session"
+    },
+    "list_users": {
+        "method": "get",
+        "access_type": "privates",
+        "display_name": "List Users"
+    }
+}

@@ -1,0 +1,12 @@
+launchctl load ~/Library/LaunchAgents/com.sanmit.railsapp.plist
+
+launchctl start com.sanmit.railsapp
+
+launchctl list | grep com.sanmit.railsapp
+
+launchctl stop com.sanmit.railsapp
+
+launchctl status com.sanmit.railsapp
+
+
+/bin/zsh -lc "source ~/.zshrc && cd /Users/sanmit/Salespms && /usr/local/bin/bundle exec puma -C /Users/sanmit/Salespms/config/puma.rb"
