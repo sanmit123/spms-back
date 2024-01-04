@@ -165,8 +165,6 @@ GEM
     websocket-extensions (0.1.5)
     zeitwerk (2.6.12)
 
-PLATFORMS
-  universal-java-16
 
 DEPENDENCIES
   active_interaction
