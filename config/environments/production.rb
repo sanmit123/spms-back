@@ -83,7 +83,9 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   # Allow requests from any host
-  config.hosts << /[a-z0-9]+\.onrender\.com/
+  # config.hosts << /[a-z0-9]+\.onrender\.com/
+  # Allow requests from specific host
+  config.hosts << "spms-5gg3.onrender.com"
 
   
   # Inserts middleware to perform automatic connection switching.
