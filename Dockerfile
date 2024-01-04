@@ -12,4 +12,6 @@ COPY . .
 
 EXPOSE 3000
 
-CMD ["rails", "server"]
+# CMD ["rails", "server", "-p", "3000"]
+CMD [ "bundle", "exec", "puma" ]
+
