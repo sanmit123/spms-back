@@ -1,7 +1,8 @@
 class CreateUser < ActiveInteraction::Base
     string :email
-    string :password
+    string :password, default: SecureRandom.hex(10)
     string :name
+    string :user_type, default: 'customer'
 
     def execute
         ActiveRecord::Base.transaction do
@@ -29,8 +30,10 @@ class CreateUser < ActiveInteraction::Base
 
     def get_params
         params = @_interaction_inputs.except(:password)
+
         return params.merge!({
-            password_hash: Digest::SHA256.hexdigest(self.password)
+            password_hash: Digest::SHA256.hexdigest(self.password),
+            user_type: self.user_type
          })
     end
 end

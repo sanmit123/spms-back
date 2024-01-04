@@ -10,20 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2024_01_03_120910) do
+ActiveRecord::Schema.define(version: 2024_01_04_171255) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "quotation_audits", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
     t.uuid "performed_by_id"
-    t.string "object"
     t.uuid "object_id"
-    t.string "action"
     t.string "action_name"
     t.jsonb "data"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "object_type", limit: 255
   end
 
   create_table "quotations", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
@@ -47,6 +46,7 @@ ActiveRecord::Schema.define(version: 2024_01_03_120910) do
     t.string "password_hash"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "user_type"
   end
 
 end
